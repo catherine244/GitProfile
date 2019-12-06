@@ -4,6 +4,11 @@
 - Catherine Nduku
 ## Descriptio
 - A search-hub that enables one  to search github users and their repositories.
+
+## Technologies Used
+- This project was generated with Angular CLI version 7.1.4.
+- HTML & CSS (Bootstrap)
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
