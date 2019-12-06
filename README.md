@@ -12,7 +12,7 @@
 - Clone this repository to a location in your file system.
 - Open terminal command line then navigate to the root folder of the application.
 - Run ng serve command.
-- Navigate to http://localhost:4200/ in your browser.
+- Navigate to http://localhost:4600/ in your browser.
 
 ## BDD
 <img src="src/assets/gs.png">
