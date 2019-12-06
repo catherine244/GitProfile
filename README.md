@@ -2,7 +2,7 @@
 - Github profile search
 ## Author
 - Catherine Nduku
-## Descriptio
+## Description
 - A search-hub that enables one  to search github users and their repositories.
 
 ## Technologies Used
