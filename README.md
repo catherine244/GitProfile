@@ -66,3 +66,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Contacts
 ccayreen24@gmail.com
+
+## license
+[MIT License](https://catherine244.github.io/DelaniStudio/blob/master/LICENSE) [Catherine](https://github.com/catherine244). 
