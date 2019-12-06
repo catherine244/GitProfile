@@ -1,11 +1,11 @@
 export class Users {
-  constructor(
-    public avatar_url:string,
-    public name:string,
-    public follower:number,
-    public following:number,
-    public repo:number
-    
-  ) {};
+  public username: string;
+  public html_url:string;
+  public location:string;
+  public followers:number;
+   public following:number;
+    public avatar_url:string;
+     public created_at:Date ;
+
    
 }
