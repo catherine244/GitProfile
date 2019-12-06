@@ -1,8 +1,9 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 <div class="container-fluid">
+    <div id="head">
 <h1>GITHUB SEARCH</h1>
 <p>An application for searching github repositories</p>
-
+</div>
 <form class="search-form">
 <div class="form-group">
 <input type="text" class="form-control " placeholder="search username" [(ngModel)]="username" name="username" (keyup)="findProfile()">
@@ -60,7 +61,7 @@
                       </ul>
                     </div>
                   </div>
-                  <a href="#!" class="btn btn-primary">View On Github</a>
+                  <p><a href="{{profile.html_url}}" target="_blank" class="btn btn-success">View profile on github</a></p>
                 </div>
               </div>
               <div class="container">
@@ -73,7 +74,7 @@
                     <h4 class="card-title">{{repo.name}}</h4>
                     <p class="card-text">{{repo.description}}</p>
                     <p class="card-text">Created at: {{repo.created_at | date}}</p>
-                    <a href="{{repo.html_url}}" target="_blank" class="btn btn-sm btn-info">View on Github</a>
+                    
                   </div>
                 </div>
             </div>
