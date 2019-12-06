@@ -55,7 +55,7 @@
                           <strong>Blog:</strong>{{profile .blog }}
                         </li>
                         <li class="list-group-item">
-                          <strong>Member Since</strong>{{ profile.created_at }}
+                          <strong>Member Since</strong>{{ profile.created_at|date }}
                         </li>
                       </ul>
                     </div>
@@ -64,29 +64,19 @@
                 </div>
               </div>
               <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class=" col-sm-10card-columns">
-                                <div class="card" *ngFor="let repos of repos">
-                                    <div class="card">
-                                         <a href="{{repos.html_url}}" class="text-align-center" target="_blank"
-                                         class="btn btn-info">View this project on github</a>
-                                        <br>
-                                        <br>
-                                        <div class=" text-center">
-                                            <h2 id="rname">{{repos.name}}</h2>
-                                        </div>
-                                        <div class="card-body">
-                                            <p id="dec">
-                                                {{repos.description}}
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
+              <div class="repotitle">
+                <h3 class="repo-title">Repositories</h3>
+              </div>
+                <div class="card" *ngFor="let repo of repos">
+                  
+                  <div class="card-body">
+                    <h4 class="card-title">{{repo.name}}</h4>
+                    <p class="card-text">{{repo.description}}</p>
+                    <p class="card-text">Created at: {{repo.created_at | date}}</p>
+                    <a href="{{repo.html_url}}" target="_blank" class="btn btn-sm btn-info">View on Github</a>
+                  </div>
+                </div>
+            </div>
           </div>
     <!-- <div class="container">
   
