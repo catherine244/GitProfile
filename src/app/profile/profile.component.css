@@ -12,9 +12,9 @@ h1{
 .badge{
   margin:5px;
 }
-.card-body{
-  margin: 7px;
-}
+/* .card-body{
+  margin: 7px; */
+
 #head h1{
   font-size: 40px;
   font-family: 'Spicy Rice', cursive;
@@ -26,3 +26,15 @@ h1{
   #head p{
     font-size: 40px;
     }
+    #dec{
+      text-align: center;
+    }
+    /* #profile.card{
+    margin-left:0%;
+    } */
+    #bio li{
+      margin-top: 1%;
+    }
+    /* .list-group-item{
+      margin-top: 40%;
+    } */

@@ -1,11 +1,8 @@
-
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-
 <div class="container-fluid">
-  <div id="head">
 <h1>GITHUB SEARCH</h1>
 <p>An application for searching github repositories</p>
-  </div>
+
 <form class="search-form">
 <div class="form-group">
 <input type="text" class="form-control " placeholder="search username" [(ngModel)]="username" name="username" (keyup)="findProfile()">
@@ -14,27 +11,109 @@
 
 
 <div *ngIf="profile">
-    <div class="container">
+        <div class="card">
+                <div class="card-header">
+                  {{ profile.name }}
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title"></h5>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <img
+                        class="img-thumbnail githib-avatar"
+                        src="{{ profile.avatar_url }}"
+                        alt=""
+                      />
+                    </div>
+                    <div class="col-md-8">
+                      <div class="stats">
+                        <span class="badge badge-primary mr-1">
+                          {{ profile.public_repos }} Public Repos</span
+                        >
+                        <span class="badge badge-secondary mr-1"
+                          >{{ profile.public_gists }} Gists</span
+                        >
+                        <span class="badge badge-success mr-1">
+                          {{ profile.followers }} Followers</span
+                        >
+                        <span class="badge badge-danger mr-1">
+                          {{ profile.following }} Following</span
+                        >
+                      </div>
+                      
+                      <ul class="list-group">
+                        <li class="list-group-item">
+                          <strong>Username:</strong>{{ profile.login }}
+                        </li>
+                        <li class="list-group-item">
+                          <strong>Location:</strong>{{ profile.location }}
+                        </li>
+                        <li class="list-group-item">
+                          <strong>Email:</strong>{{ profile.email }}
+                        </li>
+                        <li class="list-group-item">
+                          <strong>Blog:</strong>{{profile .blog }}
+                        </li>
+                        <li class="list-group-item">
+                          <strong>Member Since</strong>{{ profile.created_at }}
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a href="#!" class="btn btn-primary">View On Github</a>
+                </div>
+              </div>
+              <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class=" col-sm-10card-columns">
+                                <div class="card" *ngFor="let repos of repos">
+                                    <div class="card">
+                                         <a href="{{repos.html_url}}" class="text-align-center" target="_blank"
+                                         class="btn btn-info">View this project on github</a>
+                                        <br>
+                                        <br>
+                                        <div class=" text-center">
+                                            <h2 id="rname">{{repos.name}}</h2>
+                                        </div>
+                                        <div class="card-body">
+                                            <p id="dec">
+                                                {{repos.description}}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+          </div>
+    <!-- <div class="container">
   
       <div class="card">
         <div class="row">
           <div class="col-sm-4">
+            <div id="profile">
             <img src="{{profile.avatar_url}}" class="img-circle img-responsive" appRadius alt="profile Image">
-  
+            </div>
           </div>
+          <br> <br>
           <div class="col-sm-4">
               <div id="bio">
               <ul class="list-group">
-                <li class="list-group-item" *ngIf="profile.bio">{{profile.name}}</li>
-                <li class="list-group-item" *ngIf="profile.bio">{{profile.bio}}</li>
-                <li class="list-group-item" *ngIf="profile.bio">{{profile.email}}</li>
-                <li class="list-group-item" *ngIf="profile.bio">{{profile.location}}</li>
+                <!-- <li class="list-group-item" *ngIf="profile.bio">{{profile.name}}</li>  -->
+                <!-- <li class="list-group-item"style=margin-top:125%;padding-right:30% *ngIf="profile.bio">{{profile.bio}}</li> -->
+                <!-- <li class="list-group-item" *ngIf="profile.bio">{{profile.email}}</li> -->
+                <!-- <li class="list-group-item" *ngIf="profile.bio">{{profile.location}}</li> -->
     
-              </ul>
+              <!-- </ul>
               </div>
             </div>
+            <div class="container">
+              <div class="row">
             <div class="col-sm-4">
                 <div id="profile">
+                  <br> <br> <br>
                   <p>
                     <span class="badge badge-success">{{profile.followers}} Followers</span>
                     <span class="badge badge-primary"> {{profile.followers}} Following</span>
@@ -44,35 +123,13 @@
                   <p><a href="{{profile.html_url}}" target="_blank" class="btn btn-success">View profile on github</a></p>
                 </div>
       
-                
-      
+            </div>
+              </div>
                 </div>
       
               </div>
       
               </div>
             </div>
-          </div>
-          
-          <div class="row">
-              <div class="col-md-12">
-                  <div class=" col-sm-10card-columns">
-                      <div class="card" *ngFor="let repos of repos">
-                          <div class="card">
-                               <a href="{{repos.html_url}}" class="text-align-center" target="_blank"
-                               class="btn btn-info">View this project on github</a>
-                              <br>
-                              <br>
-                              <div class=" text-center">
-                                  <h2 id="rname">{{repos.name}}</h2>
-                              </div>
-                              <div class="card-body">
-                                  <p id="dec">
-                                      {{repos.description}}
-                                  </p>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
+          </div> --> -->
+         

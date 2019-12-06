@@ -6,7 +6,7 @@ import { Directive ,ElementRef} from '@angular/core';
 export class RadiusDirective {
 
   constructor(elem: ElementRef) {
-    elem.nativeElement.style.borderRadius = '50%';
+    elem.nativeElement.style.borderRadius = '-50%';
 
    }
 
